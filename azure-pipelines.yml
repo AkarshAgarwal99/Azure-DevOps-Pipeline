@@ -4,7 +4,7 @@ trigger:
 # pr: none
 
 pool:
-  name: Default
+  name: akarsh
 
 steps:
 - task: Npm@1
