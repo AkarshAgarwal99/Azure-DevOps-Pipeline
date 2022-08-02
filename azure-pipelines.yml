@@ -1,6 +1,18 @@
-jobs:
-- job: Linux
-  pool:
-    name: 'Default'
-  steps:
-  - script: echo hello!
+trigger:
+- master
+
+# pr: none
+
+pool:
+  name: 'Default'
+
+steps:
+- task: Npm@1
+  inputs:
+    command: install
+
+- ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/master') }}:
+  - task: Npm@1
+    inputs:
+      command: publish
+      publishEndpoint: npmjs.com
