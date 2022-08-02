@@ -1,12 +1,6 @@
-trigger:
-- master
-
-# pr: none
-
-pool:
-  name: Default
-
-steps:
-- task: Npm@1
-  inputs:
-    command: install
+jobs:
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-18.04'
+  steps:
+  - script: echo hello!
