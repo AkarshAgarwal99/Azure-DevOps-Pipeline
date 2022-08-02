@@ -1,6 +1,6 @@
 jobs:
 - job: Linux
   pool:
-    vmImage: 'ubuntu-18.04'
+    name: 'Default'
   steps:
   - script: echo hello!
