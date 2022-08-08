@@ -4,7 +4,7 @@ trigger:
 # pr: none
 
 pool:
-  name: 'Default'
+  name: 'Azure Pipelines'
 
 steps:
 - task: Npm@1
